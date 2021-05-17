@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="table-responsive">
+<div class="table-responsive postion-absolute">
     <div class="container">
         <div class="table-responsive">
             <div class="table-wrapper">
