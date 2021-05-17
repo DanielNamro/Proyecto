@@ -18,17 +18,20 @@ class TopSeeder extends Seeder
         Top::create([
             'Name'=>'Keyboard',
             'Id_Categoria'=>'1',
-            'Id_User'=>'1'
+            'Id_User'=>'1',
+            'Description'=>'aaaaaaaaaa'
         ]);
         Top::create([
             'Name'=>'Mouse',
             'Id_Categoria'=>'1',
-            'Id_User'=>'1'
+            'Id_User'=>'1',
+            'Description'=>'aaaaaaaaaa'
         ]);
         Top::create([
             'Name'=>'Screen',
             'Id_Categoria'=>'1',
-            'Id_User'=>'1'
+            'Id_User'=>'1',
+            'Description'=>'aaaaaaaaaa'
         ]);
 
     }

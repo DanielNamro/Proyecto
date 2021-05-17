@@ -50,20 +50,36 @@
             <div class="col-md-8">
                 <h1>Edit TOP</h1>
 
-                <form action="/tops/{{$top->id}}" method="post">
+                <form action="/users/{{$user->id}}" method="post">
                     @csrf
                     <input type="hidden" name="_method" value="PUT">
                     <div>
-                        <label for="texto">Texto</label>
-                        <input type="text" name="Name" value="{{$top->Name}}">
+                        <label for="Login">Login</label>
+                        <input type="text" name="Name" value="{{$user->Login}}">
                     </div>
                     <div>
-                        <label for="user_id">User ID</label>
-                        <input type="text" name="Id_Categoria" value="{{$top->Id_Categoria}}">
+                        <label for="Name">Name</label>
+                        <input type="text" name="Name" value="{{$user->Name}}">
                     </div>
                     <div>
-                        <label for="fecha">Fecha</label>
-                        <input type="text" name="Id_User" value="{{$top->Id_User}}">
+                        <label for="Surname">Surname</label>
+                        <input type="text" name="Surname" value="{{$user->Surname}}">
+                    </div>
+                    <div>
+                        <label for="Tlf">Tlf</label>
+                        <input type="text" name="Tlf" value="{{$user->Tlf}}">
+                    </div>
+                    <div>
+                        <label for="Email">Email</label>
+                        <input type="text" name="Email" value="{{$user->Email}}">
+                    </div>
+                    <div>
+                        <label for="Rol">Rol</label>
+                        <input type="text" name="Rol" value="{{$user->Rol}}">
+                    </div>
+                    <div>
+                        <label for="password">password</label>
+                        <input type="text" name="password" value="{{$user->password}}">
                     </div>
                     <input type="submit" value="Actualizar">
                 </form>

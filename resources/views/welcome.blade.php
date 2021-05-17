@@ -12,94 +12,95 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
         body {
             background-image: url(concrete-texture.png);
         }
-        
+
         body {
             margin: 0px auto;
             padding: 0px auto;
         }
-        
+
         #cabecer {
             height: 100px;
             margin-bottom: 2%;
         }
-        
+
         #log {
             float: center;
         }
-        
+
         #h1 {
             height: 150px;
             display: flex;
             align-items: center;
         }
-        
+
         #h2 {
             height: 150px;
             display: flex;
             align-items: center;
         }
-        
+
         #bus {
             width: 350px;
         }
-        
+
         .navbar-nav.navbar-center {
             position: absolute;
             display: block;
             left: 50%;
             transform: translatex(-50%);
         }
-        
+
         #ul1,
         li {
             padding-left: 40px;
         }
-        
+
         #subt {
             text-align: center;
             font-family: 'Dancing Script', cursive;
             font-size: 50px;
             margin-bottom: 30px;
         }
-        
+
         section {
             /*border: 1px solid black;*/
             height: 2200px;
             margin-left: 20%;
             margin-right: 20%;
         }
-        
+
         #s1 {
             height: 275px;
             float: left;
         }
-        
+
         #img1 {
             width: 100%;
             height: 100%;
         }
-        
+
         #img2 {
             width: 100%;
             height: 100%;
         }
-        
+
         #s2 {
             border: 1px solid black;
             height: 135px;
             float: right;
             margin-bottom: 5px;
         }
-        
+
         #s3 {
             border: 1px solid black;
             height: 135px;
             float: right;
         }
-        
+
         #subt2 {
             text-align: center;
             font-family: 'Dancing Script', cursive;
@@ -107,14 +108,14 @@
             margin-top: 60px;
             margin-bottom: 60px;
         }
-        
+
         .galeria {
-            height: calc( 300px + 3em);
+            height: calc(300px + 3em);
             width: 760px;
             margin: 1em auto;
             position: relative;
         }
-        
+
         .galeria img {
             position: absolute;
             top: 0;
@@ -122,25 +123,25 @@
             opacity: 0;
             transition: opacity 3s;
         }
-        
+
         .galeria input[type=radio] {
             position: relative;
             bottom: calc(-300px - 1.5em);
             left: .5em;
         }
-        
+
         .galeria input[type=radio]:nth-of-type(1):checked~img:nth-of-type(1) {
             opacity: 1;
         }
-        
+
         .galeria input[type=radio]:nth-of-type(2):checked~img:nth-of-type(2) {
             opacity: 1;
         }
-        
+
         .galeria input[type=radio]:nth-of-type(3):checked~img:nth-of-type(3) {
             opacity: 1;
         }
-        
+
         .galeria input[type=radio]:nth-of-type(4):checked~img:nth-of-type(4) {
             opacity: 1;
         }
@@ -158,8 +159,7 @@
                     <form class="form-search">
                         <div class="input-group">
                             <input class="form-control form-text" maxlength="128" placeholder="Buscar" size="15" type="text" />
-                            <span class="input-group-btn"><button class="btn btn-black"><i
-                                        class="fa fa-search fa-lg">&nbsp;</i></button></span>
+                            <span class="input-group-btn"><button class="btn btn-black"><i class="fa fa-search fa-lg">&nbsp;</i></button></span>
                         </div>
                     </form>
                 </div>

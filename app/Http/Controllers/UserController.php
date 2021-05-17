@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -13,8 +14,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
-        return view('user.index');
+        $users =User::all();
+        return view('user.index', ['users'=>$users]);
+          // dd($studies) ;
+
+
     }
 
     /**
@@ -24,7 +28,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $users = User::all();
+        return view('user.index', ['users' => $users]);
     }
 
     /**
@@ -36,6 +41,8 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        $users=User::create($request->all());
+        return redirect('/users');
     }
 
     /**
@@ -57,7 +64,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+
+        return view('user.edit', ['user' => $user]);
     }
 
     /**
@@ -69,8 +78,9 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-    }
+        $user = User::find($id);
+        $user->update($request->all());
+        return redirect('/users');    }
 
     /**
      * Remove the specified resource from storage.
@@ -80,6 +90,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
-    }
+        $user = User::find($id);
+        $user->delete();
+        return back()->with('status', 'Modulo borrado');    }
 }

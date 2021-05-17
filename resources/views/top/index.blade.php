@@ -14,7 +14,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <script>
-
+        $('#btn').on('click', function () {
+            $()
+        })
 
     </script>
     <style>
@@ -249,6 +251,7 @@
                                 <th>Name</th>
                                 <th>Categoria</th>
                                 <th>User</th>
+                                <th>Description</th>
                             </tr>
                         </thead>
 
@@ -260,8 +263,9 @@
                                 <td>{{$top->Name}}</td>
                                 <td>{{$top->Id_Categoria}}</td>
                                 <td>{{$top->Id_User}}</td>
+                                <td>{{$top->Description}}</td>
                                 <td>
-                                    <a href="#editEmployeeModal/$top->id" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="/tops/{{$top->id}}/edit" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                 </td>
                                 <td>
                                     <form action="/tops/{{$top->id}}" method="post">
@@ -302,6 +306,10 @@
                                 <label for="Id_User">User</label>
                                 <input type="text" class="form-control" name="Id_User" required>
                             </div>
+                            <div class="form-group">
+                                <label for="Description">Description</label>
+                                <input type="text" class="form-control" name="Description" required>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -314,40 +322,7 @@
 
 
 
-        <div id="editEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                  
-                    <form action="/tops/{{$top->id}}" method="Post">
-                        @csrf
-                        <input type="hidden" name="_method" value="PUT">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Edit Top</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label for="Name">Name</label>
-                                <input type="text" class="form-control" name="Name" value="{{$top->Name}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="Id_Categoria">Id_Categoria</label>
-                                <input type="text" class="form-control" name="Id_Categoria" value="{{$top->Id_Categoria}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="Id_User">Id_User</label>
-                                <input type="text" class="form-control" name="Id_User" value="{{$top->Id_User}}">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-info" value="Save">
-                        </div>
-                    </form>
-                </div>
-         
-            </div>
-        </div>
+
 
 
     </div>

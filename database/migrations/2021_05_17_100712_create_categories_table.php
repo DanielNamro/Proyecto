@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTopsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateTopsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tops', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('Name');
-            $table->integer('Id_Categoria');
-            $table->integer('Id_User');
-            $table->string('Description');
+            $table->string('Category');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateTopsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tops');
+        Schema::dropIfExists('categories');
     }
 }

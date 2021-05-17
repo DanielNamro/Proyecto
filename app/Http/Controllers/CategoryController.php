@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Top;
-use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class TopController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class TopController extends Controller
      */
     public function index()
     {
-        $tops = Top::all();
-        return view('top.index', ['tops'=>$tops]);
+        $categories = Category::all();
+        return view('category.index', ['categories'=>$categories]);
         //
     }
 
@@ -27,9 +26,9 @@ class TopController extends Controller
      */
     public function create()
     {
-        $tops = Top::all();
-        return view('top.index', ['tops' => $tops]);
-    }
+        $categories = Category::all();
+        return view('category.index', ['categories' => $categories]);
+        }
 
     /**
      * Store a newly created resource in storage.
@@ -39,22 +38,16 @@ class TopController extends Controller
      */
     public function store(Request $request)
     {
-       /* $rules=['orden'=>'required|integer|max:30',
-        'quantity'=>'required|integer|max:3',
-        'price'=>'required|max:6'];
-        $request->validate($rules);*/
-        $tops=Top::create($request->all());
-        return redirect('/tops');
-
-    }
+        $categories=Category::create($request->all());
+        return redirect('/categories');    }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Top  $top
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Top $top)
+    public function show(Category $category)
     {
         //
     }
@@ -62,44 +55,40 @@ class TopController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Top  $top
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $top = Top::find($id);
+        $category = Category::find($id);
 
-        return view('top.edit', ['top' => $top]);
+        return view('category.edit', ['category' => $category]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Top  $top
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        /*$rules=['name'=>'required|string|max:200',
-        'short_name'=>'required|string|max:20'];
-        $request->validate($rules);*/
-
-        $top = Top::find($id);
-        $top->update($request->all());
-        return redirect('/tops');
+        $category = Category::find($id);
+        $category->update($request->all());
+        return redirect('/categories');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Top  $top
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $top = Top::find($id);
-        $top->delete();
+        $category = Category::find($id);
+        $category->delete();
         return back()->with('status', 'Modulo borrado');
     }
 }

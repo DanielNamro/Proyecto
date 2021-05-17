@@ -247,32 +247,24 @@
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr class="col-sm-6">
-                                <th>Login</th>
-                                <th>Name</th>
-                                <th>Surname</th>
-                                <th>Tlf</th>
-                                <th>Email</th>
-                                <th>Rol</th>
-                                <th>password</th>
+                                <th>ID</th>
+                                <th>Category Name</th>
+
                             </tr>
                         </thead>
 
                         <tbody>
-                            @foreach($users as $user)
+                            @foreach($categories as $category)
                             <tr>
 
-                                <td>{{$user->Login}}</td>
-                                <td>{{$user->Name}}</td>
-                                <td>{{$user->Surname}}</td>
-                                <td>{{$user->Tlf}}</td>
-                                <td>{{$user->Email}}</td>
-                                <td>{{$user->Rol}}</td>
-                                <td>{{$user->password}}</td>
+                                <td>{{$category->id}}</td>
+                                <td>{{$category->Category}}</td>
+     
                                 <td>
-                                    <a href="/users/{{$user->id}}/edit" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="/categories/{{$category->id}}/edit" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                 </td>
                                 <td>
-                                    <form action="/users/{{$user->id}}" method="post">
+                                    <form action="/categories/{{$category->id}}" method="post">
                                         @csrf
                                         <input type="hidden" name="_method" value="delete">
                                         <input class="btn btn-sm" type="submit" value="Borrar">
@@ -290,7 +282,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
 
-                    <form action="/users" method="Post">
+                    <form action="/categories" method="Post">
 
                         @csrf
                         <div class="modal-header">
@@ -299,33 +291,10 @@
                         </div>
                         <div class="modal-body">
                         <div class="form-group">
-                                <label for="Login">Login</label>
-                                <input type="text" class="form-control" name="Login" required>
+                                <label for="Category">Category</label>
+                                <input type="text" class="form-control" name="Category" required>
                             </div>
-                            <div class="form-group">
-                                <label for="Name">Name</label>
-                                <input type="text" class="form-control" name="Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="Surname">Surname</label>
-                                <input type="text" class="form-control" name="Surname" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="Tlf">Tlf</label>
-                                <input type="text" class="form-control" name="Tlf" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="Email">Email</label>
-                                <input type="text" class="form-control" name="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="Rol">Rol</label>
-                                <input type="text" class="form-control" name="Rol" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">password</label>
-                                <input type="text" class="form-control" name="password" required>
-                            </div>
+                 
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
