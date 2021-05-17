@@ -246,11 +246,7 @@
         <h3></h3>
         <p></p>
     </aside>
-    <footer>
-        <h4></h4>
-        <a href="#"></a>
-        <a href="#"></a>
-    </footer>
+
 </body>
 
 </html>
