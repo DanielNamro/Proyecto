@@ -6,9 +6,12 @@
     <meta charset="UTF-8">
     <meta name="title" content="Título de la WEB">
     <meta name="description" content="Descripción de la WEB">
-    <link rel="stylesheet" href="./Proyecto/resources/css/bootstrap.min.css">
-    <script src="./Proyecto/resources/js/jquery-3.4.1.min.js"></script>
-    <script src="./Proyecto/resources/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
@@ -200,10 +203,10 @@
                     <input type="radio" name="navegacion" id="_2">
                     <input type="radio" name="navegacion" id="_3">
                     <input type="radio" name="navegacion" id="_4">
-                    <img src="ori.png" />
-                    <img src="preparation-baking-kitchen-ingredients-for-cooking.jpg" />
-                    <img src="http://placekitten.com/260/300" />
-                    <img src="http://www.stevensegallery.com/260/300" />
+                    <img src="../data/Proyecto/img/img/ori.png" />
+                    <img src="../data/Proyecto/img/img/ori.png" />
+                    <img src="../data/Proyecto/img/img/ori.png" />
+                    <img src="../data/Proyecto/img/img/ori.png" />
                 </div>
             </div>
             <h2 id="subt2">Disfruta de todos nuestros tops
@@ -215,7 +218,7 @@
             <div class="panel-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">LOS MEJORES RATONES</div>
-                    <div class="panel-body"><img id="img1" class="img-fluid" src="./img/foto1.jpg" /></div>
+                    <div class="panel-body"><img id="img1" class="img-fluid" src="./Proyecto/img/img/gaming-pattern.png" /></div>
                 </div>
             </div>
             <div class="panel-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
