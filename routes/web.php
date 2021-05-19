@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TopController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentaryController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +28,7 @@ Route::resource('tops', TopController::class);
 
 Route::resource('categories', CategoryController::class);
 
+Route::resource('coments', CommentaryController::class);
 
 Auth::routes();
 

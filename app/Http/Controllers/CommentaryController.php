@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Top;
-use App\Models\User;
+use App\Models\Commentary;
 use Illuminate\Http\Request;
 
-class TopController extends Controller
+class CommentaryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,8 @@ class TopController extends Controller
      */
     public function index()
     {
-        $tops = Top::all();
-        return view('top.index', ['tops'=>$tops]);
-        //
+        $comments = Commentary::all();
+        return view('commentary.index', ['comments' => $comments]);
     }
 
     /**
@@ -27,8 +25,8 @@ class TopController extends Controller
      */
     public function create()
     {
-        $tops = Top::all();
-        return view('top.index', ['tops' => $tops]);
+        return view('commentary.create');
+    
     }
 
     /**
@@ -39,68 +37,57 @@ class TopController extends Controller
      */
     public function store(Request $request)
     {
-       /* $rules=['orden'=>'required|integer|max:30',
+          /* $rules=['orden'=>'required|integer|max:30',
         'quantity'=>'required|integer|max:3',
         'price'=>'required|max:6'];
         $request->validate($rules);*/
-        $tops=Top::create($request->all());
-        return redirect('/tops');
+        $comments=Commentary::create($request->all());
+        return back();
 
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Top  $top
+     * @param  \App\Models\Commentary  $commentary
      * @return \Illuminate\Http\Response
      */
-    public function show(Top $top)
+    public function show(Commentary $commentary)
     {
-        $coments = $top->coments()->get();
-        return view('top.show',['top'=>$top, 'coments'=>$coments]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Top  $top
+     * @param  \App\Models\Commentary  $commentary
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Commentary $commentary)
     {
-        $top = Top::find($id);
-
-        return view('top.edit', ['top' => $top]);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Top  $top
+     * @param  \App\Models\Commentary  $commentary
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Commentary $commentary)
     {
-        /*$rules=['name'=>'required|string|max:200',
-        'short_name'=>'required|string|max:20'];
-        $request->validate($rules);*/
-
-        $top = Top::find($id);
-        $top->update($request->all());
-        return redirect('/tops');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Top  $top
+     * @param  \App\Models\Commentary  $commentary
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Commentary $commentary)
     {
-        $top = Top::find($id);
-        $top->delete();
-        return back()->with('status', 'Modulo borrado');
+        //
     }
 }

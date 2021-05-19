@@ -19,6 +19,9 @@ class CreateTopsTable extends Migration
             $table->integer('Id_Categoria');
             $table->integer('Id_User');
             $table->string('Description');
+            $table->string('pn1');
+            $table->string('pn2');
+            $table->string('pn3');
             $table->string('p1');
             $table->string('p2');
             $table->string('p3');
