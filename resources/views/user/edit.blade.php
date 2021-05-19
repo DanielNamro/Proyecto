@@ -28,8 +28,8 @@
                         <input type="text" name="Tlf" value="{{$user->Tlf}}">
                     </div>
                     <div>
-                        <label for="Email">Email</label>
-                        <input type="text" name="Email" value="{{$user->Email}}">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" value="{{$user->email}}">
                     </div>
                     <div>
                         <label for="Rol">Rol</label>

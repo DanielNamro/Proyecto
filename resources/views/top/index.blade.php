@@ -39,6 +39,10 @@
                                 <td>
                                     <a href="/tops/{{$top->id}}/edit" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                 </td>
+
+                                <td>
+                                    <a href="/tops/{{$top->id}}" class="edit">SHOW</a>
+                                </td>
                                 <td>
                                     <form action="/tops/{{$top->id}}" method="post">
                                         @csrf

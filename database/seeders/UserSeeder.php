@@ -1,7 +1,6 @@
 <?php
 
 namespace Database\Seeders;
-
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -15,31 +14,35 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::create([
-            'Login' => 'Pepe',
-            'Name' => 'Pepon',
-            'Surname' => 'Pepito',
-            'Tlf' => '1234567',
-            'Email' => 'aa@pep.es',
-            'Rol' => 'User',
-            'password' => 'aaaaaaaaaa'
-        ]);
+            'name' => 'Manolo',
+
+            'email'=>'manolopenya@dws.es',
+            'password'=>bcrypt('secret'),
+            ]);
         User::create([
-            'Login' => 'Pepa',
-            'Name' => 'Pepoa',
-            'Surname' => 'Pepita',
-            'Tlf' => '123451',
-            'Email' => 'aa@pepa.es',
-            'Rol' => 'User',
-            'password' => 'aaaaaaaaaa'
-        ]);
+            'name' => 'Ana',
+            'email'=>'anapenya@dws.es',
+            'password'=>bcrypt('secret'),
+            ]);
         User::create([
-            'Login' => 'Pepi',
-            'Name' => 'Pepi',
-            'Surname' => 'Pepiti',
-            'Tlf' => '1239',
-            'Email' => 'aa@pepi.es',
-            'Rol' => 'User',
-            'password' => 'aaaaaaaaaa'
-        ]);
+            'name' => 'Jose',
+            'email'=>'josepenya@dws.es',
+            'password'=>bcrypt('secret'),
+            ]);
+        User::create([
+            'name' => 'Ruben',
+            'email'=>'rubenpenya@dws.es',
+            'password'=>bcrypt('secret'),
+            ]);
+        User::create([
+            'name' => 'Maria',
+            'email'=>'mariapenya@dws.es',
+            'password'=>bcrypt('secret'),
+            ]);
+        User::create([    
+            'name' => 'admin',
+            'email'=>'admin@dws.es',
+            'password'=>bcrypt('secret'),
+            ]);            
     }
 }

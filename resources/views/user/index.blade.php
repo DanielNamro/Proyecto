@@ -37,7 +37,7 @@
                                 <td>{{$user->Name}}</td>
                                 <td>{{$user->Surname}}</td>
                                 <td>{{$user->Tlf}}</td>
-                                <td>{{$user->Email}}</td>
+                                <td>{{$user->email}}</td>
                                 <td>{{$user->Rol}}</td>
                                 <td>{{$user->password}}</td>
                                 <td>

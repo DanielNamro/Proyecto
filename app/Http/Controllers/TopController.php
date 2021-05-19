@@ -56,7 +56,7 @@ class TopController extends Controller
      */
     public function show(Top $top)
     {
-        //
+        return view('top.show',['top'=>$top]);
     }
 
     /**

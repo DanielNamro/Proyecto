@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Auth\Events\Login;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -93,4 +94,10 @@ class UserController extends Controller
         $user = User::find($id);
         $user->delete();
         return back()->with('status', 'Modulo borrado');    }
+    
+
+    public  function Login()
+    {
+        # code...
+    }
 }
