@@ -14,4 +14,8 @@ class Commentary extends Model
     {
         return $this->belongsTo(Top::class, "parte_tarea_id");
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class, "User_id");
+    }
 }

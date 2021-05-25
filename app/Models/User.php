@@ -40,16 +40,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function parteTareas()
+    public function coments()
     {
-        return $this->hasMany(ParteTareas::class);
+        return $this->hasMany(Commentary::class);
     }
-    public function propuestas(){
-        return $this->hasMany(Propuesta::class);
+    public function top()
+    {
+        return $this->hasMany(Top::class);
     }
-    public function consumos(){
-        return $this->hasMany(Consumo::class);
-    }
+
 
         /**
     * Get the identifier that will be stored in the subject claim of the JWT.

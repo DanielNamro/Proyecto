@@ -6,6 +6,10 @@
 
         font-size: 20px;
     }
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
 </style>
 <div class="container">
     <div class="row justify-content-center">
@@ -53,7 +57,7 @@
                         @foreach($coments as $coment)
                         <div class="well well bs-component">
                             <div class="content">
-                              <p>{{$coment->User_id}} ha comentado:  {{$coment->Text}}
+                              <p>{{$coment->user->name}} ha comentado:  {{$coment->Text}}
                             </div>
                         </div>
                         @endforeach

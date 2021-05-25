@@ -9,5 +9,10 @@ class Category extends Model
 {
     protected $fillable = ['Category'];
 
+    public function top()
+    {
+        return $this->hasMany(Top::class);
+    }
+
     use HasFactory;
 }

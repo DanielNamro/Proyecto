@@ -16,4 +16,12 @@ class Top extends Model
     {
         return $this->hasMany(Commentary::class,"Top_id");
     }
+    public function category()
+    {
+        return $this->belongsTo(Category::class,"Id_Categoria");
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class,"Id_User");
+    }
 }

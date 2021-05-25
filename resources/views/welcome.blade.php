@@ -27,6 +27,10 @@
         height: 500px;
         float: none;
     }
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
 </style>
 <main class="py-4">
     <!--     @yield('content')-->

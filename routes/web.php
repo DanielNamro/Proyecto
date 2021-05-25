@@ -21,12 +21,15 @@ use App\Http\Controllers\CommentaryController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/contact', function () {
+    return view('contact');
+});
 
 Route::resource('users', UserController::class);
 
 Route::resource('tops', TopController::class);
 
-Route::resource('categories', CategoryController::class);
+Route::resource('categories', CategoryController::class)->middleware('admin');
 
 Route::resource('coments', CommentaryController::class);
 

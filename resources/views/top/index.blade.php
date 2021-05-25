@@ -33,8 +33,8 @@
 
                                 <td>{{$top->id}}</td>
                                 <td>{{$top->Name}}</td>
-                                <td>{{$top->Id_Categoria}}</td>
-                                <td>{{$top->Id_User}}</td>
+                                <td>{{$top->category->Category}}</td>
+                                <td>{{$top->user->name}}</td>
                                 <td>{{$top->Description}}</td>
                                 <td>
                                     <a href="/tops/{{$top->id}}/edit" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>

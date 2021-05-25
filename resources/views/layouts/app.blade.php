@@ -197,6 +197,11 @@
         .modal form label {
             font-weight: normal;
         }
+        footer{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+        }
     </style>
 
 </head>
@@ -223,6 +228,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/tops">Tops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">About Us</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -272,23 +280,23 @@
             <!-- Section: Social media -->
             <section class="mb-4">
                 <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="../contact.php" role="button"><span
+                <a class="btn btn-outline-light btn-floating m-1" href="../contact" role="button"><span
                         class="material-icons">facebook</span></a>
 
                 <!-- Twitter -->
-                <a class="btn btn-outline-light btn-floating m-1" href="../contact.php" role="button"><span
+                <a class="btn btn-outline-light btn-floating m-1" href="../contact" role="button"><span
                         class="material-icons">rss_feed</span></a>
 
                 <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="../contact.php" role="button"><span
+                <a class="btn btn-outline-light btn-floating m-1" href="../contact" role="button"><span
                         class="material-icons">email</span></a>
 
                 <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="../contact.php" role="button"><span
+                <a class="btn btn-outline-light btn-floating m-1" href="../contact" role="button"><span
                         class="material-icons">location_on</span></a>
 
                 <!-- Github -->
-                <a class="btn btn-outline-light btn-floating m-1" href="../contact.php" role="button"><span
+                <a class="btn btn-outline-light btn-floating m-1" href="../contact" role="button"><span
                         class="material-icons">call</span></a>
             </section>
             <!-- Section: Social media -->
