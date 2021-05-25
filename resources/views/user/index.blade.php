@@ -19,12 +19,9 @@
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr class="col-sm-6">
-                                <th>Login</th>
+                                <th>Id</th>
                                 <th>Name</th>
-                                <th>Surname</th>
-                                <th>Tlf</th>
                                 <th>Email</th>
-                                <th>Rol</th>
                                 <th>password</th>
                             </tr>
                         </thead>
@@ -33,12 +30,9 @@
                             @foreach($users as $user)
                             <tr>
 
-                                <td>{{$user->Login}}</td>
-                                <td>{{$user->Name}}</td>
-                                <td>{{$user->Surname}}</td>
-                                <td>{{$user->Tlf}}</td>
+                                <td>{{$user->id}}</td>
+                                <td>{{$user->name}}</td>
                                 <td>{{$user->email}}</td>
-                                <td>{{$user->Rol}}</td>
                                 <td>{{$user->password}}</td>
                                 <td>
                                     <a href="/users/{{$user->id}}/edit" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -70,33 +64,17 @@
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
-                        <div class="form-group">
-                                <label for="Login">Login</label>
-                                <input type="text" class="form-control" name="Login" required>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" name="name" required>
                             </div>
                             <div class="form-group">
-                                <label for="Name">Name</label>
-                                <input type="text" class="form-control" name="Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="Surname">Surname</label>
-                                <input type="text" class="form-control" name="Surname" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="Tlf">Tlf</label>
-                                <input type="text" class="form-control" name="Tlf" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="Email">Email</label>
-                                <input type="text" class="form-control" name="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="Rol">Rol</label>
-                                <input type="text" class="form-control" name="Rol" required>
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" name="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="password">password</label>
-                                <input type="text" class="form-control" name="password" required>
+                                <input type="password" class="form-control" name="password" required>
                             </div>
                         </div>
                         <div class="modal-footer">

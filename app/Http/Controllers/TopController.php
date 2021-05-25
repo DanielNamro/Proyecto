@@ -44,7 +44,7 @@ class TopController extends Controller
         'price'=>'required|max:6'];
         $request->validate($rules);*/
         $tops=Top::create($request->all());
-        return redirect('/tops');
+        return redirect('/tops/request->Top');
 
     }
 

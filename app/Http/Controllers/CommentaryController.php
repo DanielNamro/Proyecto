@@ -42,6 +42,7 @@ class CommentaryController extends Controller
         'price'=>'required|max:6'];
         $request->validate($rules);*/
         $comments=Commentary::create($request->all());
+
         return back();
 
     }

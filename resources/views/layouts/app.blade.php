@@ -206,14 +206,14 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Welcome to AMATOP</a>
+            <a class="navbar-brand" href="/">Welcome to AMATOP</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/users">Users</a>
@@ -266,41 +266,37 @@
             @yield('content')
     </main>
 </body>
+<footer class="bg-dark text-center text-white bottom ">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="../contact.php" role="button"><span
+                        class="material-icons">facebook</span></a>
 
-<footer class="bg-dark text-center text-white fixed-bottom">
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-        <!-- Section: Social media -->
-        <section class="mb-4">
-            <!-- Facebook -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="../contact.php" role="button"><span
+                        class="material-icons">rss_feed</span></a>
 
-            <!-- Twitter -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="../contact.php" role="button"><span
+                        class="material-icons">email</span></a>
 
-            <!-- Google -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="../contact.php" role="button"><span
+                        class="material-icons">location_on</span></a>
 
-            <!-- Instagram -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="../contact.php" role="button"><span
+                        class="material-icons">call</span></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
 
-            <!-- Linkedin -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
 
-            <!-- Github -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
-        </section>
-        <!-- Section: Social media -->
-    </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/">Amatop</a>
-    </div>
-    <!-- Copyright -->
-</footer>
+    </footer>
 
 
 </html>

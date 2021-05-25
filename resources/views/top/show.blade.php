@@ -44,22 +44,60 @@
                 </div>
                 <BR>
                 <BR>
-            
+
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h5>COMENTARIOS</h5> <a href="/coments/create" class="btn  float-right">Añadir comentario</a>
+                        <h5>COMENTARIOS</h5> <a href="#addEmployeeModal" id="btn" class="float-right" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Commentary</span></a>
+
+
                         @foreach($coments as $coment)
                         <div class="well well bs-component">
                             <div class="content">
-                                {{$coment->Text}}
+                              <p>{{$coment->User_id}} ha comentado:  {{$coment->Text}}
                             </div>
                         </div>
                         @endforeach
 
-                       
+
                     </div>
                 </div>
             </ul>
+        </div>
+
+
+
+        <div id="addEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <form action="/coments" method="Post">
+
+                        @csrf
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Commentary</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="User_id">User_id</label>
+                                <input type="text" class="form-control" name="User_id" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Top_id">Top_id</label>
+                                <input type="text" class="form-control" name="Top_id" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Text">Text</label>
+                                <input type="text" class="form-control" name="Text" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Add">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     @endsection

@@ -1,256 +1,186 @@
-<!DOCTYPE html>
-<html lang="es">
+@extends('layouts.app')
 
-<head>
+@section('content')
+
 <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+    #subt {
+        text-align: center;
+        font-family: 'Dancing Script', cursive;
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
 
-        body {
-            background-image: url(concrete-texture.png);
-        }
+    #subt2 {
+        text-align: center;
+        font-family: 'Dancing Script', cursive;
+        font-size: 50px;
 
-        body {
-            margin: 0px auto;
-            padding: 0px auto;
-        }
+        margin-bottom: 60px;
+    }
 
-        #cabecer {
-            height: 100px;
-            margin-bottom: 2%;
-        }
+    #ca {
+        margin-bottom: 10px;
+    }
 
-        #log {
-            float: center;
-        }
-
-        #h1 {
-            height: 150px;
-            display: flex;
-            align-items: center;
-        }
-
-        #h2 {
-            height: 150px;
-            display: flex;
-            align-items: center;
-        }
-
-        #bus {
-            width: 350px;
-        }
-
-        .navbar-nav.navbar-center {
-            position: absolute;
-            display: block;
-            left: 50%;
-            transform: translatex(-50%);
-        }
-
-        #ul1,
-        li {
-            padding-left: 40px;
-        }
-
-        #subt {
-            text-align: center;
-            font-family: 'Dancing Script', cursive;
-            font-size: 50px;
-            margin-bottom: 30px;
-        }
-
-        section {
-            /*border: 1px solid black;*/
-            height: 2200px;
-            margin-left: 20%;
-            margin-right: 20%;
-        }
-
-        #s1 {
-            height: 275px;
-            float: left;
-        }
-
-        #img1 {
-            width: 100%;
-            height: 100%;
-        }
-
-        #img2 {
-            width: 100%;
-            height: 100%;
-        }
-
-        #s2 {
-            border: 1px solid black;
-            height: 135px;
-            float: right;
-            margin-bottom: 5px;
-        }
-
-        #s3 {
-            border: 1px solid black;
-            height: 135px;
-            float: right;
-        }
-
-        #subt2 {
-            text-align: center;
-            font-family: 'Dancing Script', cursive;
-            font-size: 50px;
-            margin-top: 60px;
-            margin-bottom: 60px;
-        }
-
-        .galeria {
-            height: calc(300px + 3em);
-            width: 760px;
-            margin: 1em auto;
-            position: relative;
-        }
-
-        .galeria img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            transition: opacity 3s;
-        }
-
-        .galeria input[type=radio] {
-            position: relative;
-            bottom: calc(-300px - 1.5em);
-            left: .5em;
-        }
-
-        .galeria input[type=radio]:nth-of-type(1):checked~img:nth-of-type(1) {
-            opacity: 1;
-        }
-
-        .galeria input[type=radio]:nth-of-type(2):checked~img:nth-of-type(2) {
-            opacity: 1;
-        }
-
-        .galeria input[type=radio]:nth-of-type(3):checked~img:nth-of-type(3) {
-            opacity: 1;
-        }
-
-        .galeria input[type=radio]:nth-of-type(4):checked~img:nth-of-type(4) {
-            opacity: 1;
-        }
-    </style>
-    <title>Título de la WEB</title>
-    <meta charset="UTF-8">
-    <meta name="title" content="Título de la WEB">
-    <meta name="description" content="Descripción de la WEB">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
-   
-</head>
-
-<body>
-    <header>
-        <div class="row" id="cabecer">
-            <div class="col-lg-6" id="h1"><img src="logos/unnamed.png" alt="" id="log" class="center-block"></div>
-            <div class="col-lg-6" id="h2" class=" justify-content-center">
+    #carouselExampleIndicators {
+        width: 1000px;
+        height: 500px;
+        float: none;
+    }
+</style>
+<main class="py-4">
+    <!--     @yield('content')-->
+</main>
 
 
-                <div class="search head_search" id="bus">
-                    <form class="form-search">
-                        <div class="input-group">
-                            <input class="form-control form-text" maxlength="128" placeholder="Buscar" size="15" type="text" />
-                            <span class="input-group-btn"><button class="btn btn-black"><i class="fa fa-search fa-lg">&nbsp;</i></button></span>
+
+<div id="contenedor" class="container col-lg-10 justify-content-center">
+        <h2 id="subt">WE WILL HELP YOU TO FIND WHAT IS THE BEST FOR YOU
+        </h2>
+
+        <div class="container ">
+            <div class="row ">
+                <div id="carouselExampleIndicators"
+                    class="carousel slide  mx-auto d-block col-lg-10 col-md-10 col-sm-10 col-xs-12"
+                    data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://www.ejemplos.co/wp-content/plugins/contextual-related-posts/default.png"
+                                class="d-block w-100" alt="...">
                         </div>
-                    </form>
+                        <div class="carousel-item">
+                            <img src="https://www.ejemplos.co/wp-content/plugins/contextual-related-posts/default.png"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://www.ejemplos.co/wp-content/plugins/contextual-related-posts/default.png"
+                                class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev d-block" href="#carouselExampleIndicators" role="button"
+                        data-slide="prev">
+
+                        <span class="sr-only ">Previous</span>
+                    </a>
+                    <a class="carousel-control-next d-block " href="#carouselExampleIndicators" role="button"
+                        data-slide="next">
+
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </header>
-    <div class="row">
-        <nav class=" col-lg-12 navbar navbar-inverse" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-center" id="ul1">
-                    <li><a href="#">Center 1</a></li>
-                    <li><a href="#">Center 2</a></li>
-                    <li><a href="#">Center 3</a></li>
-                    <li><a href="#">Center 1</a></li>
-                    <li><a href="#">Center 2</a></li>
-                    <li><a href="#">Center 3</a></li>
-                    <li><a href="#">Center 1</a></li>
 
-                </ul>
-
-            </div>
-        </nav>
-    </div>
-    <section>
-        <article>
-            <h2 id="subt">Te ayudaremos a encontrar lo que mas te conviene
-            </h2>
+            <!-- Carousel wrapper -->
             <div class="row">
-                <div class="galeria">
-                    <input type="radio" name="navegacion" id="_1" checked>
-                    <input type="radio" name="navegacion" id="_2">
-                    <input type="radio" name="navegacion" id="_3">
-                    <input type="radio" name="navegacion" id="_4">
-                    <img src="../data/Proyecto/img/img/ori.png" />
-                    <img src="../data/Proyecto/img/img/ori.png" />
-                    <img src="../data/Proyecto/img/img/ori.png" />
-                    <img src="../data/Proyecto/img/img/ori.png" />
-                </div>
-            </div>
-            <h2 id="subt2">Disfruta de todos nuestros tops
-            </h2>
+                <h2 id="subt2">Enjoy our best tops</h2>
 
-
-
-
-            <div class="panel-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">LOS MEJORES RATONES</div>
-                    <div class="panel-body"><img id="img1" class="img-fluid" src="./Proyecto/img/img/gaming-pattern.png" /></div>
-                </div>
-            </div>
-            <div class="panel-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">MONITORES POR MENOS DE 100€</div>
-                    <div class="panel-body"><img id="img2" class="img-fluid" src="./Proyecto/resources/img/Captura.PNG" /></div>
-                </div>
-            </div>
-            <div class="panel-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">MONITORES POR MENOS DE 100€</div>
-                    <div class="panel-body">
-                        <img class="img-fluid" id="img3" src="./img/foto3.jpg" />
+                <div class="card-deck" id="ca">
+                    <div class="card">
+                        <div class="card-body mx-auto">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body mx-auto">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                                content.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body mx-auto">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This card has even longer content than the first to show that equal
+                                height
+                                action.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="panel-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">MONITORES POR MENOS DE 100€</div>
-                    <div class="panel-body"><img id="img4" class="img-fluid" src="./img/foto4.jpg" /></div>
+            <div class="row">
+                <h4 id="subt2">Gaming</h4>
+
+                <div class="card-deck" id="ca">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                                content.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This card has even longer content than the first to show that equal
+                                height
+                                action.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="row">
+                <h2 id="subt2">Electronics
+                </h2>
 
+
+                <div class="card-deck" id="ca">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                                content.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This card has even longer content than the first to show that equal
+                                height
+                                action.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </article>
-    </section>
-    <aside>
-        <h3></h3>
-        <p></p>
-    </aside>
-
+        </div>
+    </div>
 </body>
+
+@endsection
+
 
 </html>
