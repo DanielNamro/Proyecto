@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
+ 
     /**
      * Display a listing of the resource.
      *
@@ -47,9 +52,10 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show($id)
     {
-        //
+        $categories = Category::find($id);
+        return view('category.show', ['categories' => $categories]);
     }
 
     /**

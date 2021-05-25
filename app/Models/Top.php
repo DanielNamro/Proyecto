@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Top extends Model
 {
-    protected $fillable = ['Name', 'Id_Categoria', 'Id_User','Description'];
+    protected $fillable = ['Name', 'Id_Categoria', 'Id_User','Description','pn1','pn2','pn3','p1','p2','p3'];
 
     use HasFactory;
 

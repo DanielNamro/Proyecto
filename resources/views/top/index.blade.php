@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-
+<style>
+footer{
+        position: relative;
+        bottom: 0px;
+    }
+</style>
     <div class="table-responsive">
         <div class="container">
             <div class="table-responsive">
@@ -12,7 +17,7 @@
                                 <h2>Manage <b>TOPS</b></h2>
                             </div>
                             <div class="col-sm-6">
-                                <a href="#addEmployeeModal" id="btn" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>Add New Top</span></a>
+                                <a href="#addEmployeeModal" id="btn" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Top</span></a>
                             </div>
                         </div>
                     </div>
@@ -24,6 +29,13 @@
                                 <th>Categoria</th>
                                 <th>User</th>
                                 <th>Description</th>
+                                <th>Producto 1</th>
+                                <th>Producto 2</th>
+                                <th>Producto 3</th>
+                                <th>Descripcion producto 1</th>
+                                <th>Descripcion producto 2</th>
+                                <th>Descripcion producto 3</th>
+
                             </tr>
                         </thead>
 
@@ -36,6 +48,12 @@
                                 <td>{{$top->category->Category}}</td>
                                 <td>{{$top->user->name}}</td>
                                 <td>{{$top->Description}}</td>
+                                <td>{{$top->pn1}}</td>
+                                <td>{{$top->pn2}}</td>
+                                <td>{{$top->pn3}}</td>
+                                <td>{{$top->p1}}</td>
+                                <td>{{$top->p2}}</td>
+                                <td>{{$top->p3}}</td>
                                 <td>
                                     <a href="/tops/{{$top->id}}/edit" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                 </td>
@@ -86,6 +104,31 @@
                                 <label for="Description">Description</label>
                                 <input type="text" class="form-control" name="Description" required>
                             </div>
+                            <div class="form-group">
+                                <label for="pn1">Product 1</label>
+                                <input type="text" class="form-control" name="pn1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pn2">Product 2</label>
+                                <input type="text" class="form-control" name="pn2" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pn3">Product 3</label>
+                                <input type="text" class="form-control" name="pn3" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="p1">Description product 3</label>
+                                <input type="text" class="form-control" name="p1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="p2">Description product 3</label>
+                                <input type="text" class="form-control" name="p2" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="p3">Description product 3</label>
+                                <input type="text" class="form-control" name="p3" required>
+                            </div>
+
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">

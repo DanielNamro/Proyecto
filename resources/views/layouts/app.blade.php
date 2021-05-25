@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+    <title>Amatop</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -12,16 +12,15 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <script>
-        $('#btn').on('click', function () {
-            $()
-        })
 
-    </script>
     <style>
+     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+       *{
+        background-image: url("concrete-texture.png");
+       }
         body {
             color: #566787;
-            background: #f5f5f5;
+            /*background: #f5f5f5;*/
             font-family: 'Varela Round', sans-serif;
             font-size: 13px;
         }
@@ -34,7 +33,8 @@
             background: #fff;
             padding: 20px 25px;
             border-radius: 3px;
-            min-width: 1000px;
+            max-width: 2000px;
+            min-width: 500px;
             box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
         }
 

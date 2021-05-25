@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 
 class TopController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin')->only('edit');
+        $this->middleware('admin')->only('destroy');
+        $this->middleware('admin')->only('create');
+
+
+    }
     /**
      * Display a listing of the resource.
      *
@@ -44,7 +52,7 @@ class TopController extends Controller
         'price'=>'required|max:6'];
         $request->validate($rules);*/
         $tops=Top::create($request->all());
-        return redirect('/tops/request->Top');
+        return redirect('/tops');
 
     }
 

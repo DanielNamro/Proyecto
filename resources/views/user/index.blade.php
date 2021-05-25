@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-
+<style>
+footer{
+        position: relative;
+        bottom: 0px;
+    }
+</style>
     <div class="table-responsive">
         <div class="container">
             <div class="table-responsive">
@@ -38,10 +43,14 @@
                                     <a href="/users/{{$user->id}}/edit" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                 </td>
                                 <td>
+                                    <a href="/users/{{$user->id}}"><span class="material-icons">info</span></a>
+                                </td>
+                                <td>
                                     <form action="/users/{{$user->id}}" method="post">
                                         @csrf
                                         <input type="hidden" name="_method" value="delete">
-                                        <input class="btn btn-sm" type="submit" value="Borrar">
+                                        <input class="btn btn-sm material-icons" type="submit" value="delete_outline">
+                                      
                                     </form>
                                 </td>
                             </tr>

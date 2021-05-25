@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+
 <div class="table-responsive postion-absolute">
     <div class="container">
         <div class="table-responsive">
@@ -8,7 +10,7 @@
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h2>Manage <b>USERS</b></h2>
+                            <h2>Manage <b>Categories</b></h2>
                         </div>
                         <div class="col-sm-6">
                             <a href="#addEmployeeModal" id="btn" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New User</span></a>
@@ -35,10 +37,13 @@
                                 <a href="/categories/{{$category->id}}/edit" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             </td>
                             <td>
+                                    <a href="/categories/{{$category->id}}"><span class="material-icons">info</span></a>
+                                </td>
+                            <td>
                                 <form action="/categories/{{$category->id}}" method="post">
                                     @csrf
                                     <input type="hidden" name="_method" value="delete">
-                                    <input class="btn btn-sm" type="submit" value="Borrar">
+                                    <input class="btn btn-sm material-icons" type="submit" value="delete_outline">
                                 </form>
                             </td>
                         </tr>
