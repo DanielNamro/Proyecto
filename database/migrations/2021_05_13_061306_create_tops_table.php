@@ -25,6 +25,9 @@ class CreateTopsTable extends Migration
             $table->string('p1');
             $table->string('p2');
             $table->string('p3');
+            $table->string('enlace');
+            $table->string('enlace2');
+            $table->string('enlace3');
             $table->timestamps();
         });
     }

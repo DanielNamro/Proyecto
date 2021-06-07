@@ -15,12 +15,10 @@
 
     <style>
      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-       *{
-        background-image: url("concrete-texture.png");
-       }
+
         body {
             color: #566787;
-            /*background: #f5f5f5;*/
+        background: #f5f5f5;
             font-family: 'Varela Round', sans-serif;
             font-size: 13px;
         }
@@ -240,6 +238,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
+                                
                             @endif
                             
                             @if (Route::has('register'))

@@ -75,6 +75,13 @@ class UserController extends Controller
         return view('user.edit', ['user' => $user]);
     }
 
+    public function change($id)
+    {
+        $user = User::find($id);
+
+        return view('user.change', ['user' => $user]);
+    }
+
     /**
      * Update the specified resource in storage.
      *

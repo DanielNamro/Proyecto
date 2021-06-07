@@ -6,26 +6,25 @@
     <div class="container ">
         <div class="row justify-content-left">
             <div class="col-md-8">
-                <h1>Edit USER</h1>
+                <h1>Edit TOP</h1>
 
                 <form action="/users/{{$user->id}}" method="post">
                     @csrf
                     <input type="hidden" name="_method" value="PUT">
                     <div>
-                        <label for="name" class="col-form-label">Name</label>
-                        <input type="text" name="name" class="form-control" value="{{$user->name}}">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" value="{{$user->name}}" type="hidden">
                     </div>
 
                     <div>
-                        <label for="email"  class="col-form-label">Email</label>
-                        <input type="text" class="form-control" name="email" value="{{$user->email}}">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" value="{{$user->email}}" type="hidden">
                     </div>
 
                     <div>
-                        <label for="password" class="col-form-label">password</label>
-                        <input type="password" class="form-control" name="password" value="{{$user->password}}">
+                        <label for="password">Change Password</label>
+                        <input type="password" name="password" value="{{$user->password}}">
                     </div>
-                    <br>
                     <input type="submit" value="Actualizar">
                 </form>
             </div>

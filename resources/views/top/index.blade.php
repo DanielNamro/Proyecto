@@ -2,26 +2,31 @@
 
 @section('content')
 <style>
-footer{
-        position: relative;
+    footer {
+        position: absolute;
         bottom: 0px;
     }
+
+    #t {
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+        justify-items: right;
+    }
 </style>
-    <div class="table-responsive">
-        <div class="container">
-            <div class="table-responsive">
-                <div class="table-wrapper">
-                    <div class="table-title">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h2>Manage <b>TOPS</b></h2>
-                            </div>
-                            <div class="col-sm-6">
-                                <a href="#addEmployeeModal" id="btn" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Top</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <table class="table table-striped table-hover">
+<div class="container">
+    <div class="table-wrapper col-xs-6">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2> <b>TOPS</b></h2>
+                </div>
+                <div class="col-sm-6">
+                    <a href="#addEmployeeModal" id="btn" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Top</span></a>
+                </div>
+            </div>
+        </div>
+        <!--<table class="table table-striped table-hover">
                         <thead>
                             <tr class="col-sm-6">
                                 <th>Id</th>
@@ -71,73 +76,44 @@ footer{
                             </tr>
                             @endforeach
                         </tbody>
-                    </table>
-                </div>
+                    </table>-->
+
+
+        @foreach($tops as $top)
+        @if($top->category->Category == $top->category->Category)
+        <ul>
+
+            <li>
+                <h5>CATEGORY: {{$top->category->Category}} </h5>
+            </li>
+            <div id="t">
+                <li>
+                    <h6>TOP ABOUT: {{$top->Name}} </h6>
+                </li>
+
+
+                <a href="/tops/{{$top->id}}/edit" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                <a href="/tops/{{$top->id}}"><span class="material-icons">info</span></a>
+                <form action="/tops/{{$top->id}}" method="post">
+                    @csrf
+                    <input type="hidden" name="_method" value="delete">
+                    <input class="btn btn-sm material-icons" type="submit" value="delete_outline">
+                </form>
             </div>
-        </div>
-        <!-- ADD Modal HTML -->
-        <div id="addEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
 
-                    <form action="/tops" method="Post">
+        </ul>
+        @endif
+        @endforeach
 
-                        @csrf
-                        <div class="modal-header">
-                            <h4 class="modal-title">Add Top</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label for="Name">Name</label>
-                                <input type="text" class="form-control" name="Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="Id_Categoria">Categoria</label>
-                                <input type="text" class="form-control" name="Id_Categoria" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="Id_User">User</label>
-                                <input type="text" class="form-control" name="Id_User" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="Description">Description</label>
-                                <input type="text" class="form-control" name="Description" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pn1">Product 1</label>
-                                <input type="text" class="form-control" name="pn1" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pn2">Product 2</label>
-                                <input type="text" class="form-control" name="pn2" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pn3">Product 3</label>
-                                <input type="text" class="form-control" name="pn3" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="p1">Description product 3</label>
-                                <input type="text" class="form-control" name="p1" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="p2">Description product 3</label>
-                                <input type="text" class="form-control" name="p2" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="p3">Description product 3</label>
-                                <input type="text" class="form-control" name="p3" required>
-                            </div>
 
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-success" value="Add">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -145,6 +121,90 @@ footer{
 
 
     </div>
+</div>
+</div>
+<!-- ADD Modal HTML -->
+<div id="addEmployeeModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <form action="/tops" method="Post">
+
+                @csrf
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Top</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="text" class="form-control" name="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Id_Categoria">Categoria</label>
+                        <input type="text" class="form-control" name="Id_Categoria" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Id_User">User</label>
+                        <input type="text" class="form-control" name="Id_User" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Description">Description</label>
+                        <input type="text" class="form-control" name="Description" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pn1">Product 1</label>
+                        <input type="text" class="form-control" name="pn1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pn2">Product 2</label>
+                        <input type="text" class="form-control" name="pn2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pn3">Product 3</label>
+                        <input type="text" class="form-control" name="pn3" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p1">Description product 3</label>
+                        <input type="text" class="form-control" name="p1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p2">Description product 2</label>
+                        <input type="text" class="form-control" name="p2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p3">Description product 3</label>
+                        <input type="text" class="form-control" name="p3" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="enlace">Enlace 1</label>
+                        <input type="text" class="form-control" name="enlace" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="enlace2">Enlace 2</label>
+                        <input type="text" class="form-control" name="enlace2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="enlace3">Enlace 3</label>
+                        <input type="text" class="form-control" name="enlace3" required>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-success" value="Add">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</div>
 </body>
 
 @endsection

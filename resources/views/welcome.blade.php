@@ -3,9 +3,6 @@
 @section('content')
 
 <style>
-    *{
-        background-image: url("concrete-texture.png");
-    }
     #subt {
         text-align: center;
         font-family: 'Dancing Script', cursive;

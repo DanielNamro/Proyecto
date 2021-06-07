@@ -6,9 +6,16 @@
 
         font-size: 20px;
     }
-    footer{
+
+    footer {
         position: relative;
         bottom: 0px;
+    }
+    #a{
+        color: black;
+    }
+    p{
+        font-size: 15px;
     }
 </style>
 <div class="container">
@@ -24,40 +31,41 @@
                     </div>
                 </div>
 
-                <div class="list-group">
-                    <a href="https://www.amazon.es/Rii-inal%C3%A1mbrico-recargable-ajustables-Ordenadores/dp/B07RDJM9RH?ref_=Oct_s9_apbd_otopr_hd_bw_b11TI2Z&pf_rd_r=KVT07E3S303BZ7J2JMW4&pf_rd_p=fd5d8c7c-1fc1-5e74-afca-139586cec4c7&pf_rd_s=merchandised-search-10&pf_rd_t=BROWSE&pf_rd_i=937890031" class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">TOP 1: {{$top->pn1}}</h5>
-                        </div>
-                        <p class="mb-1">{{$top->p1}}</p>
-                    </a>
-                    <br>
-                    <a href="https://www.amazon.es/Rii-inal%C3%A1mbrico-recargable-ajustables-Ordenadores/dp/B07RDJM9RH?ref_=Oct_s9_apbd_otopr_hd_bw_b11TI2Z&pf_rd_r=KVT07E3S303BZ7J2JMW4&pf_rd_p=fd5d8c7c-1fc1-5e74-afca-139586cec4c7&pf_rd_s=merchandised-search-10&pf_rd_t=BROWSE&pf_rd_i=937890031" class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">TOP 2: {{$top->pn1}}</h5>
-                        </div>
-                        <p class="mb-1">{{$top->p1}}</p>
-                    </a>
-                    <br>
-                    <a href="https://www.amazon.es/Rii-inal%C3%A1mbrico-recargable-ajustables-Ordenadores/dp/B07RDJM9RH?ref_=Oct_s9_apbd_otopr_hd_bw_b11TI2Z&pf_rd_r=KVT07E3S303BZ7J2JMW4&pf_rd_p=fd5d8c7c-1fc1-5e74-afca-139586cec4c7&pf_rd_s=merchandised-search-10&pf_rd_t=BROWSE&pf_rd_i=937890031" class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">TOP 3: {{$top->pn1}}</h5>
-                        </div>
-                        <p class="mb-1">{{$top->p1}}</p>
-                    </a>
+                <div class="list-group" id="a">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">TOP 1: {{$top->pn1}}</h5>
+                    </div>
+                    <p class="mb-1">{{$top->p1}}</p>
+                    <a href="{{$top->enlace}}"><small>PINCHA AQUÍ PARA IR AL PRODUCTO </small></a>
+                    <p></p>
+                    <p></p>
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">TOP 2: {{$top->pn2}}</h5>
+                    </div>
+                    <p class="mb-1">{{$top->p2}}</p>
+                    <a href="{{$top->enlace2}}"><small>PINCHA AQUÍ PARA IR AL PRODUCTO </small></a>
+
+                    <p></p>
+                    <p></p>
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">TOP 3: {{$top->pn3}}</h5>
+                    </div>
+                    <p class="mb-1">{{$top->p3}}</p>
+                    <a href="{{$top->enlace3}}"><small>PINCHA AQUÍ PARA IR AL PRODUCTO </small></a>
+
                 </div>
                 <BR>
                 <BR>
 
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h5>COMENTARIOS</h5> <a href="#addEmployeeModal" id="btn" class="float-right" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Commentary</span></a>
+                      <strong>  <h5>COMMENT</h5> </strong><a href="#addEmployeeModal" id="btn" class="float-right" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Commentary</span></a>
 
 
                         @foreach($coments as $coment)
                         <div class="well well bs-component">
                             <div class="content">
-                              <p>{{$coment->user->name}} ha comentado:  {{$coment->Text}}
+                                <p>{{$coment->user->name}} ha comentado: {{$coment->Text}}
                             </div>
                         </div>
                         @endforeach
@@ -88,7 +96,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="Top_id">Top_id</label>
-                                <input type="text" class="form-control" name="Top_id" required>
+                                <input type="text" class="form-control" name="Top_id" value="{{$top->ID}}"required>
                             </div>
                             <div class="form-group">
                                 <label for="Text">Text</label>
